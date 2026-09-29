@@ -1,17 +1,18 @@
-# Use an official lightweight Python image
-FROM python:3.12-slim
+FROM ubuntu:16.04
 
-# Set the working directory
+MAINTAINER Luca Ciaramitaro "lciaramitaro27@cmc.edu"
+
+RUN apt-get update -y && \
+    apt-get install -y python-pip python-dev
+
+COPY ./requirements.txt /app/requirements.txt
+
 WORKDIR /app
 
-# Copy project files into the container
-COPY . /app
-
-# Install dependencies
 RUN pip install -r requirements.txt
 
-# Expose port 1132 for Flask
-EXPOSE 1132
+COPY . /app
 
-# Command to run the app
-CMD ["python", "app.py"]
+ENTRYPOINT ["python"]
+
+CMD ["app.py"]

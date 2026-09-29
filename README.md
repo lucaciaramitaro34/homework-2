@@ -1,8 +1,8 @@
 # Flask Docker Homework
 
-This homework demostrates how to build and run a Python Flask app with Docker. A tutorial from runnable.com was followed to complete this assignment. 
+This homework demonstrates how to build and run a Python Flask app with Docker. A tutorial from runnable.com was followed to complete this assignment. The tutorial uses python 2.7 instead of python3, providing us with a challenge to get the system running.
 
 ## Screenshot
 
-![Flask webpage screenshot](HW2_Image.jpg)
+![Flask webpage screenshot](Homework2_Image.jpg)
 
